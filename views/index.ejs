@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="icons/weather.ico">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="Top-container">
+      <nav class="navbar navbar-light justify-content-between">
+        <h2 class="brand">Weather in <%= Query %></h2>
+        <form class="form-inline" action="/" method="post">
+          <input class="form-control mr-sm-2" type="text" name="cityName" placeholder="location">
+          <button class="btn" type="submit" style="background-color: white">Search</button>
+        </form>
+      </nav>
+    </div>
+
+    <div class="Middle-container">
+      <div class="row">
+        <div class="col-sm">
+          <h4>Temperature</h4>
+          <p><%=Temp %> degrees</p>
+        </div>
+        <div class="col-sm">
+          <h4>Types of precipitation</h4>
+          <p><%= WeatherDescription%></p>
+        </div>
+        <div class="col-sm">
+          <img src="<%=iconUrl%>">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <p>Made with ❤️ by Anisimov Oleg.</p>
+  </div>
+
+
+</body>
+
+</html>
